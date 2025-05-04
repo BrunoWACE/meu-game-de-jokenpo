@@ -1,7 +1,7 @@
 # 🥋 JokenPô - DevClub Edition
 
 Bem-vindo ao meu jogo de **Jokenpô** (Pedra, Papel e Tesoura) feito com **HTML, CSS e JavaScript**!  
-Inspirado na cultura japonesa com toques visuais modernos e responsividade, esse mini-game foi desenvolvido como parte dos meus estudos no **DevClub**.
+Inspirado na cultura japonesa com toques visuais modernos e responsividade, esse mini-game foi desenvolvido como parte dos meus estudos no <a href="https://rodolfomori.com.br" target="_blank">DevClub</a></b>.
 
 ---
 
