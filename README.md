@@ -18,11 +18,11 @@ Inspirado na cultura japonesa com toques visuais modernos e responsividade, esse
 
 | Tecnologia | Descrição |
 |------------|------------|
-| **HTML5** | Estrutura da página |
-| **CSS3** | Estilização visual e animações |
-| **JavaScript** | Lógica do jogo e interatividade |
-| **Google Fonts** | Tipografia japonesa estilizada |
-| **Responsividade** | Suporte para dispositivos móveis |
+| ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white) | Estrutura da página |
+| ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)| Estilização visual e animações |
+| ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)| Lógica do jogo e interatividade |
+| ![Typography](https://img.shields.io/badge/Typography-Custom_Styles-informational?style=flat&color=7957D5)| Tipografia japonesa estilizada |
+| ![Responsivo](https://img.shields.io/badge/Responsivo-100%25%20Mobile-00c4cc?style=flat)| Suporte para dispositivos móveis |
 
 ---
 
