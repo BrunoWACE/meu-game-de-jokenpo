@@ -1,6 +1,6 @@
 # 🥋 JokenPô - DevClub Edition
 
-Bem-vindo ao meu jogo de **Jokenpô** (Pedra, Papel e Tesoura) feito com 💛 **HTML, CSS e JavaScript**!  
+Bem-vindo ao meu jogo de **Jokenpô** (Pedra, Papel e Tesoura) feito com **HTML, CSS e JavaScript**!  
 Inspirado na cultura japonesa com toques visuais modernos e responsividade, esse mini-game foi desenvolvido como parte dos meus estudos no **DevClub**.
 
 ---
@@ -47,7 +47,7 @@ Sim! O jogo foi adaptado para funcionar **perfeitamente em celulares**:
 
 ## 🖼️ Preview do Jogo
 
-![Screenshot do jogo](./screenshot.png) <!-- Substitua pela imagem real do projeto -->
+<img src="https://github.com/BrunoWACE/meu-game-de-jokenpo/blob/main/assests/ImgGameJokenPO.png?raw=true"/>
 
 ---
 
