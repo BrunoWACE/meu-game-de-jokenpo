@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>DevClub JokenPô</title>
+
+</head>
+
+<body>
+    <div id="start-screen">
+        <h1 class="titles">Joken<span id="start-po">Pô</span></h1>
+        <h2>じゃんけんぽん</h2>
+        <p class="press-start">Pressione ENTER para começar</p>
+        <footer class="footer">
+            <p>&copy; 2025 BrunoWACE — Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <div id="hajime-screen">
+        <h1 class="hajime-text">はじめっ！</h1>
+    </div>
+
+    <div class="container">
+        <h1 class="titles">Joken<span>Pô</span></h1>
+        <h2>じゃんけんぽん</h2>
+        <div class="buttons">
+            <button id="rock" onclick="playHuman('rock')">&#x1F44A;</button>
+            <button id="paper" onclick="playHuman('paper')">&#x1f590;</button>
+            <button id="scissors" onclick="playHuman('scissors')">&#x270c;</button>
+        </div>
+        <p class="result"></p>
+
+
+        <p class="you-score">Sua Pontuação: <span id="human-score">0</span></p>
+        <p class="machine-score">CPU: <span id="machine-score">0</span></p>
+        <button id="reset-button">🔁 Resetar Pontos</button>
+
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

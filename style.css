@@ -1,0 +1,301 @@
+@font-face {
+    font-family: 'GoodBrush';
+    src: url('./fonts/GoodBrush.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /*background: url("https://static.vecteezy.com/system/resources/previews/006/955/112/non_2x/japanese-element-background-free-vector.jpg");
+    background: url("https://picsum.photos/1600/900");*/
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 120px;
+    font-family: 'GoodBrush', cursive, sans-serif;
+}
+
+h2 {
+    margin-top: -40px;
+    font-weight: bolder;
+    font-family: 'Yu Mincho', sans-serif;
+}
+
+.container {
+    padding: 50px;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons {
+    margin: 50px 0;
+    display: flex;
+    gap: 50px;
+}
+
+button {
+
+    padding: 10px;
+    font-size: 110px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+button:hover {
+    opacity: 0.6;
+}
+
+#rock {
+    background-color: #fd2b2b;
+}
+
+#paper {
+    background-color: #27ff27;
+}
+
+#scissors {
+    background-color: #2727fd;
+}
+
+p {
+    font-weight: bolder;
+    font-size: 30px;
+    margin-bottom: 8px;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #393939;
+}
+
+.titles span {
+    color: #c10000;
+    font-size: 170px;
+}
+
+.you-score span {
+    color: #08e700;
+}
+
+.machine-score span {
+    color: #2c01ec;
+}
+
+@keyframes pop { /* Keyframe usado para alterar a escala dos icones*/
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+
+.result.pop {
+    animation: pop 0.3s ease-in-out;
+}
+
+.result {
+    font-size: 50px;
+    font-family: 'GoodBrush', cursive, sans-serif;
+    color: #c10000;
+}
+
+@keyframes scaleUp { /* Keyframe usado para alterar a escala do result*/
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+
+.animate {
+    animation: scaleUp 0.3s ease-in-out;
+}
+
+#start-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.titles h1 {
+    font-size: 140px;
+}
+
+#start-po {
+    font-size: 220px;
+}
+
+.press-start {
+    font-size: 30px;
+    margin-top: 40px;
+    animation: blink 2s infinite;
+}
+
+@keyframes blink { /* Keyframe usado para animação do PÔ*/
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@keyframes shake {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(2px, -2px); }
+    50% { transform: translate(-2px, 2px); }
+    75% { transform: translate(2px, 2px); }
+    100% { transform: translate(0, 0); }
+}
+
+.shake {
+    display: inline-block;
+    animation: shake 0.4s infinite;
+}
+
+#hajime-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+.hajime-text {
+    font-size: 130px;
+    font-family: 'GoodBrush', cursive, sans-serif;
+    animation: zoomInOut 2s ease-in-out;
+}
+
+@keyframes zoomInOut { /* Keyframe apçicado para o hajime */
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1.5); opacity: 1; }
+    100% { transform: scale(1); opacity: 0; }
+}
+
+.footer p {
+    font-size: 15px !important;
+    font-weight: normal !important;
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 1px 1px 2px #888;
+}
+
+.footer {
+    position: absolute;
+
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+#reset-button {
+    margin-top: 22px;
+    padding: 15px 25px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #ffa500;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#reset-button:hover {
+    background-color: #cc8400;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 65px;
+    }
+
+    .titles span {
+        font-size: 95px;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-top: -20px;
+    }
+
+    .buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+    
+
+    button {
+        font-size: 56px;
+        padding: 8px;
+    }
+
+    .container {
+        width: 90%;
+        padding: 30px 20px;
+    }
+
+    p {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .result {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    #reset-button {
+        width: 70%;
+        font-size: 18px;
+        padding: 12px;
+        margin-top: 45px;
+    }
+
+    .footer p {
+        font-size: 12px !important;
+    }
+
+    #start-screen h1, {
+        font-size: 65px !important;
+    }
+
+    #start-po {
+        font-size: 95px !important;
+    }
+
+    .press-start {
+        font-size: 20px;
+    }
+
+    .hajime-text {
+        font-size: 50px;
+    }
+}
+
