@@ -1,4 +1,4 @@
-# 🥋 JokenPô - Game
+# 🥋 JokenPô - GAME
 
 Bem-vindo ao meu jogo de **Jokenpô** (Pedra, Papel e Tesoura) feito com **HTML, CSS e JavaScript**!  
 Inspirado na cultura japonesa com toques visuais modernos e responsividade, esse mini-game foi criado com um propósito especial:
