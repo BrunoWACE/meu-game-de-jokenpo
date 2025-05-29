@@ -20,15 +20,15 @@ const GAME_OPTIONS = {
 const playHuman = (humanChoice) => {
 
     const machineChoice = playMachine()
-playTheGame(humanChoice, machineChoice)
+    playTheGame(humanChoice, machineChoice)
 
-// anima botão humano
-const humanBtn = document.getElementById(humanChoice)
-animateButton(humanBtn)
+    // anima botão humano
+    const humanBtn = document.getElementById(humanChoice)
+    animateButton(humanBtn)
 
-// anima botão da máquina
-const machineBtn = document.getElementById(machineChoice)
-animateButton(machineBtn)
+    // anima botão da máquina
+    const machineBtn = document.getElementById(machineChoice)
+    animateButton(machineBtn)
 
 }
 
@@ -39,34 +39,64 @@ const playMachine = () => {
     return choices[randomNumber]
 }
 
-const playTheGame = (human, machine) => {
 
+
+const playTheGame = (human, machine) => {
     console.log('humano: ' + human + 'maquina' + machine)
 
     if (human === machine) {
         result.innerHTML = "EMPATE!";
-
-      
-
-
-    } else if ((human === GAME_OPTIONS.PAPER && machine === GAME_OPTIONS.ROCK) ||
+    } else if (
+        (human === GAME_OPTIONS.PAPER && machine === GAME_OPTIONS.ROCK) ||
         (human === GAME_OPTIONS.ROCK && machine === GAME_OPTIONS.SCISSORS) ||
-        human === GAME_OPTIONS.SCISSORS && machine === GAME_OPTIONS.PAPER) {
-
-        humanScoreNumber++
-        humanScore.innerHTML = humanScoreNumber
-        result.innerHTML = "VITÓRIA!"
+        (human === GAME_OPTIONS.SCISSORS && machine === GAME_OPTIONS.PAPER)
+    ) {
+        humanScoreNumber++;
+        humanScore.innerHTML = humanScoreNumber;
+        result.innerHTML = "VITÓRIA!";
     } else {
-        machineScoreNumber++
-        machineScore.innerHTML = machineScoreNumber
-        result.innerHTML = "DERROTA!"
+        machineScoreNumber++;
+        machineScore.innerHTML = machineScoreNumber;
+        result.innerHTML = "DERROTA!";
     }
 
-    result.classList.remove('pop'); // remove se já tiver
-    void result.offsetWidth;        // força o reflow
-    result.classList.add('pop');    // reaplica animação
+    result.classList.remove('pop');
+    void result.offsetWidth;
+    result.classList.add('pop');
 
+    // ✅ Aqui verifica se alguém ganhou
+    checkVictory();
 }
+
+
+function checkVictory() {
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+    if (humanScoreNumber >= 5) {
+        result.innerHTML = isMobile
+            ? "🎉 OMEDETOU!"
+            : "🎉 OMEDETOU! VOCÊ VENCEU A DISPUTA DE JOKENPÔ!";
+        disableButtons();
+        resetButton.style.display = "inline-block";
+    } else if (machineScoreNumber >= 5) {
+        result.innerHTML = isMobile
+            ? "💥 MAKETA!"
+            : "💥 MAKETA! TENTE NOVAMENTE.";
+        disableButtons();
+        resetButton.style.display = "inline-block";
+    }
+}
+
+
+
+function disableButtons() {
+    const buttons = document.querySelectorAll(".buttons button");
+    buttons.forEach(btn => {
+        btn.disabled = true;
+        btn.classList.add("disabled");
+    });
+}
+
 
 function animateButton(button) {
     button.classList.remove('animate') // remove se já tiver
@@ -76,7 +106,8 @@ function animateButton(button) {
 
 const startScreen = document.getElementById("start-screen")
 const gameContainer = document.querySelector(".container")
-const poStart = document.getElementById("start-po") // novo
+const poStart = document.getElementById("start-po")
+const resetButton = document.getElementById("reset-button");
 
 // esconde o jogo até apertar Enter
 gameContainer.style.display = "none"
@@ -110,13 +141,20 @@ startScreen.addEventListener("click", () => {
     }, 1000)
 })
 
-const resetButton = document.getElementById("reset-button")
-
 resetButton.addEventListener("click", () => {
-    humanScoreNumber = 0
-    machineScoreNumber = 0
-    humanScore.innerHTML = 0
-    machineScore.innerHTML = 0
-    result.innerHTML = ""
-})
+    humanScoreNumber = 0;
+    machineScoreNumber = 0;
 
+    humanScore.innerHTML = 0;
+    machineScore.innerHTML = 0;
+
+    result.innerHTML = "- - -";
+
+    const buttons = document.querySelectorAll(".buttons button");
+    buttons.forEach(btn => {
+        btn.disabled = false;
+        btn.classList.remove("disabled");
+    });
+
+    resetButton.style.display = "none"; // 👉 esconde de novo
+});

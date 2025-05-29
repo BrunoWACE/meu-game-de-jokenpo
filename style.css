@@ -9,9 +9,14 @@
     box-sizing: border-box;
 }
 
+html,
 body {
-    /*background: url("https://static.vecteezy.com/system/resources/previews/006/955/112/non_2x/japanese-element-background-free-vector.jpg");
-    background: url("https://picsum.photos/1600/900");*/
+    height: 100%;
+}
+
+body {
+    /*background: url("https://static.vecteezy.com/system/resources/previews/006/955/112/non_2x/japanese-element-background-free-vector.jpg");*/
+    /*background: url("https://picsum.photos/1600/900");*/
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -20,12 +25,13 @@ body {
 }
 
 h1 {
-    font-size: 120px;
+    font-size: 80px;
     font-family: 'GoodBrush', cursive, sans-serif;
 }
 
 h2 {
-    margin-top: -40px;
+    font-size: 15px;
+    margin-top: -35px;
     font-weight: bolder;
     font-family: 'Yu Mincho', sans-serif;
 }
@@ -33,23 +39,23 @@ h2 {
 .container {
     padding: 50px;
     background-color: #FFFFFF;
-    border-radius: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: transparent;
 }
 
 .buttons {
     margin: 50px 0;
     display: flex;
-    gap: 50px;
+    gap: 30px;
 }
 
 button {
 
     padding: 10px;
-    font-size: 110px;
+    font-size: 60px;
     cursor: pointer;
     border: none;
     border-radius: 10px;
@@ -74,7 +80,7 @@ button:hover {
 
 p {
     font-weight: bolder;
-    font-size: 30px;
+    font-size: 17px;
     margin-bottom: 8px;
     font-family: 'Noto Sans JP', sans-serif;
     color: #393939;
@@ -82,7 +88,7 @@ p {
 
 .titles span {
     color: #c10000;
-    font-size: 170px;
+    font-size: 125px;
 }
 
 .you-score span {
@@ -93,10 +99,20 @@ p {
     color: #2c01ec;
 }
 
-@keyframes pop { /* Keyframe usado para alterar a escala dos icones*/
-    0% { transform: scale(1); }
-    50% { transform: scale(1.15); }
-    100% { transform: scale(1); }
+@keyframes pop {
+
+    /* Keyframe usado para alterar a escala dos icones*/
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .result.pop {
@@ -104,15 +120,26 @@ p {
 }
 
 .result {
-    font-size: 50px;
+    margin-top: -15px;
+    font-size: 32px;
     font-family: 'GoodBrush', cursive, sans-serif;
     color: #c10000;
 }
 
-@keyframes scaleUp { /* Keyframe usado para alterar a escala do result*/
-    0% { transform: scale(1); }
-    50% { transform: scale(1.15); }
-    100% { transform: scale(1); }
+@keyframes scaleUp {
+
+    /* Keyframe usado para alterar a escala do result*/
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .animate {
@@ -137,11 +164,11 @@ p {
 }
 
 .titles h1 {
-    font-size: 140px;
+    font-size: 100px;
 }
 
 #start-po {
-    font-size: 220px;
+    font-size: 140px;
 }
 
 .press-start {
@@ -150,17 +177,39 @@ p {
     animation: blink 2s infinite;
 }
 
-@keyframes blink { /* Keyframe usado para animação do PÔ*/
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
+@keyframes blink {
+
+    /* Keyframe usado para animação do PÔ*/
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
 }
 
 @keyframes shake {
-    0% { transform: translate(0, 0); }
-    25% { transform: translate(2px, -2px); }
-    50% { transform: translate(-2px, 2px); }
-    75% { transform: translate(2px, 2px); }
-    100% { transform: translate(0, 0); }
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(2px, -2px);
+    }
+
+    50% {
+        transform: translate(-2px, 2px);
+    }
+
+    75% {
+        transform: translate(2px, 2px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
 }
 
 .shake {
@@ -188,15 +237,28 @@ p {
     animation: zoomInOut 2s ease-in-out;
 }
 
-@keyframes zoomInOut { /* Keyframe apçicado para o hajime */
-    0% { transform: scale(0); opacity: 0; }
-    50% { transform: scale(1.5); opacity: 1; }
-    100% { transform: scale(1); opacity: 0; }
+@keyframes zoomInOut {
+
+    /* Keyframe apçicado para o hajime */
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
 }
 
 .footer p {
-    font-size: 15px !important;
-    font-weight: normal !important;
+    font-size: 15px;
+    font-weight: normal;
     margin: 0;
     padding: 0;
     color: #000000;
@@ -206,15 +268,14 @@ p {
 
 .footer {
     position: absolute;
-
     bottom: 10px;
     width: 100%;
     text-align: center;
 }
 
 #reset-button {
-    margin-top: 22px;
-    padding: 15px 25px;
+    margin-top: 15px;
+    padding: 10px 20px;
     font-size: 20px;
     font-weight: bold;
     background-color: #ffa500;
@@ -229,7 +290,43 @@ p {
     background-color: #cc8400;
 }
 
+.score-box {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0 auto;
+    width: 250px;
+}
+
+.score-item {
+    background-color: #cfcfcf;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1px;
+    width: 180px;
+    text-align: center;
+}
+
+#human-score {
+    color: #07c400;
+    font-size: 25px;
+}
+
+#machine-score {
+    color: #006ac1;
+    font-size: 25px;
+}
+
+button:disabled,
+button.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: scale(1);
+}
+
 @media (max-width: 768px) {
+
     h1 {
         font-size: 65px;
     }
@@ -249,16 +346,17 @@ p {
         gap: 15px;
         justify-content: center;
     }
-    
+
 
     button {
-        font-size: 56px;
+        font-size: 90px;
         padding: 8px;
+        border-radius: 10px;
     }
 
     .container {
-        width: 90%;
-        padding: 30px 20px;
+        width: 100%;
+        padding: 30px 5%;
     }
 
     p {
@@ -279,15 +377,15 @@ p {
     }
 
     .footer p {
-        font-size: 12px !important;
+        font-size: 12px;
     }
 
-    #start-screen h1, {
-        font-size: 65px !important;
+    #start-screen h1 {
+        font-size: 65px;
     }
 
     #start-po {
-        font-size: 95px !important;
+        font-size: 95px;
     }
 
     .press-start {
@@ -297,5 +395,27 @@ p {
     .hajime-text {
         font-size: 50px;
     }
+
+    .score-box {
+        gap: 1rem;
+        max-width: 260px;
+    }
+
+    .score-item {
+        font-size: 1rem;
+        padding: 4px;
+    }
+
+    .copy {
+        font-size: 5px;
+    }
 }
 
+
+@media (max-width: 680px) {
+
+    button {
+        font-size: 50px;
+        padding: 8px;
+    }
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -20,12 +20,12 @@
         <h2>じゃんけんぽん</h2>
         <p class="press-start">Pressione ENTER para começar</p>
         <footer class="footer">
-            <p>&copy; 2025 BrunoWACE — Todos os direitos reservados.</p>
+            <p class="copy">&copy; 2025 BrunoWACE — Todos os direitos reservados.</p>
         </footer>
     </div>
 
     <div id="hajime-screen">
-        <h1 class="hajime-text">はじめっ！</h1>
+        <h1 class="hajime-text">HAJIME!</h1>
     </div>
 
     <div class="container">
@@ -36,12 +36,20 @@
             <button id="paper" onclick="playHuman('paper')">&#x1f590;</button>
             <button id="scissors" onclick="playHuman('scissors')">&#x270c;</button>
         </div>
-        <p class="result"></p>
+        <p class="result">- - -</p>
 
+        <br>
+        <div class="score-box">
+            <div class="score-item">
+                <p>P1<br><hr><br><span id="human-score">0</span></p>
+            </div>
+            <div class="score-item">
+                <p>CPU<br><hr><br><span id="machine-score">0</span></p>
+            </div>
+        </div>
+        <br>
+        <button id="reset-button" style="display: none;">🔁 REINICIAR</button>
 
-        <p class="you-score">Sua Pontuação: <span id="human-score">0</span></p>
-        <p class="machine-score">CPU: <span id="machine-score">0</span></p>
-        <button id="reset-button">🔁 Resetar Pontos</button>
 
     </div>
     <script src="./script.js"></script>
