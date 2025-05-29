@@ -54,6 +54,7 @@ Sim! O jogo foi adaptado para funcionar **perfeitamente em celulares**:
 
 ---
 
-## 🚀 Link do game
-https://brunowace.github.io/meu-game-de-jokenpo/
+## 🚀 Link do Game
+[Jogue agora clicando aqui!](https://brunowace.github.io/meu-game-de-jokenpo/)  
+💡 Dica: segure Ctrl (ou clique com o botão direito) para abrir em uma nova guia!
 
